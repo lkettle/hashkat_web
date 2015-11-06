@@ -1,0 +1,260 @@
+<!DOCTYPE html
+
+	PUBLIC "-//W#W//DTD XHTML 1.0 Transitional//EN
+
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
+<head>
+	<link rel="icon" type="image/png" href="images/hkat_3.png" alt="icon" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Hashkat Settings</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/hashkat.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<header>
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index_linda.html">Hashkat</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Hashkat</a></li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/about/">About</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/">Documentation</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/feedback/">Contact</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/build.html">Previous</a></li>
+					<li><a href="/world.html">Next</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<body class="settings">
+	<!--this will go to INFILE.yaml-->
+	<form action="hashkat.php" method="post">
+		<fieldset>
+			<legend>Settings</legend>
+			<p>m = minutes, n = number, rate = n per simulated minute, probability = 0 to 1.0</p>
+			<table align="center">
+				<tr>
+					<td>Initial Agents</td>
+					<td>
+						<input type="number" name="initial_agents" value="1000" min="1" />
+					</td>
+					<td>Use Random Time Increment</td>
+					<td>
+						<radioset>
+							<input type="radio" name="use_random_time_increment" value="true" checked="checked" />True
+							<input type="radio" name="use_random_time_increment" value="false" />False</radioset>
+					</td>
+				</tr>
+				<tr>
+					<td>Maximum Agents</td>
+					<td>
+						<input type="number" name="max_agents" value="1000" min="1" />
+					</td>
+					<td>Use Follow-Back</td>
+					<td>
+						<radioset>
+							<input type="radio" name="use_followback" value="true" />True
+							<input type="radio" name="use_followback" value="false" checked="checked" />False</radioset>
+					</td>
+				</tr>
+				<tr>
+					<td>Maximum Simulated Time (m)</td>
+					<td>
+						<input type="number" name="max_time" value="100000" min="1" />
+					</td>
+					<td>Use Follow Via Retweets</td>
+					<td>
+						<radioset>
+							<input type="radio" name="use_follow_via_retweets" value="true" />True
+							<input type="radio" name="use_follow_via_retweets" value="false" checked="checked" />False</radioset>
+					</td>
+				</tr>
+				<tr>
+					<td>Maximum Real Time (m)</td>
+					<td>
+						<input type="number" name="max_real_time" value="1" min="1" />
+					</td>
+					<td>Use Hashtag Probability (0-1.0)</td>
+					<td>
+						<input type="number" name="use_hashtag_probability" value="0.5" min="0.0" max="1.0"> </td>
+				</tr>
+				<tr>
+					<td>Unfollow Absolute Tweet Rate</td>
+					<td>
+						<input type="number" name="unfollow_tweet_rate" value="10000" min="0" />
+					</td>
+					<td>Unfollow Relative Chattiness</td>
+					<td>
+						<radioset>
+							<input type="radio" name="stage1_unfollow" value="true" checked="checked" />True
+							<input type="radio" name="stage1_unfollow" value="false" />False</radioset>
+					</td>
+				</tr>
+				<tr>
+					<td>Decay Time (m)</td>
+					<td>
+						<input type="number" name="time_span" value="480" />info
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend>Barabasi</legend>
+			<table align="center">
+				<p>^^if F #_of_barb disabled? is barabasi exponent disabled? is barabasi exponent used in every preferential attachment model</p>
+				<tr>
+					<td>Use Barabasi</td>
+					<td>
+						<radioset>
+							<input type="radio" name="use_barabasi" value="true" />True
+							<input type="radio" name="use_barabasi" value="false" checked="checked" />False</radioset>
+					</td>
+				</tr>
+				<tr>
+					<td>Barabasi Exponent</td>
+					<td>
+						<input type="number" name="barabasi_exponent" value="1" min="1" />
+					</td>
+				</tr>
+				<tr>
+					<td>Number of Barabasi Connections</td>
+					<td>
+						<input type="number" name="barabasi_connections" value="100" min="0" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend>New Agents: Rate Added to Network</legend>
+			<p>^^if C slope disabled</p>
+			<table align="center">
+				<tr>
+					<td>Add Rate</td>
+					<td>
+						<radioset>
+							<input type="radio" name="function" value="constant" checked="checked" />Constant
+							<input type="radio" name="function" value="linear" />Linear</radioset>
+					</td>
+					<td class="buffer"></td>
+				</tr>
+				<tr>
+					<td>Constant Value</td>
+					<td>
+						<input type="number" name="value" value="0.0" />
+					</td>
+				</tr>
+				<tr>
+					<td>Slope</td>
+					<td>
+						<input type="number" name="slope" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>Follow Model</legend>
+			<table align="center">
+				<p>^^proportions disabled UNLESS combo model - could be an oncheck=()</p>
+				<tr>
+					<td>Follow Model</td>
+					<td>
+						<select name="follow_model">
+							<option selected="selected" value="random">Random</option>
+							<option value="twitter_suggest">Preferential Global</option>
+							<option value="agent">Agent</option>
+							<option value="preferential_agent">Preferential Agent</option>
+							<option value="hashtag">Hashtag</option>
+							<option value="twitter">Combination</option>
+
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Proportions for Combination Model:</td>
+				</tr>
+				<tr>
+					<td>Random</td>
+					<td>
+						<input type="number" name="random" min="0" max="100"> %</td>
+				</tr>
+				<tr>
+					<td>Preferential Global</td>
+					<td>
+						<input type="number" name="twitter_suggest" min="0" max="100"> %</td>
+				</tr>
+				<tr>
+					<td>Agent</td>
+					<td>
+						<input type="number" name="agent" min="0" max="100"> %</td>
+					<td>
+				</tr>
+				<tr>
+					<td>Preferential Agent</td>
+					<td>
+						<input type="number" name="preferential_agent" min="0" max="100"> %</td>
+				</tr>
+				<tr>
+					<td>Hashtag</td>
+					<td>
+						<input type="number" name="hashtag" min="0" max="100"> %</td>
+				</tr>
+				<tr>
+					<td>Total:</td>
+					<td>
+						<div id="combocheck"></div>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	<div class="container">
+
+	</div>
+</body>
+
+<!-- custom scripts -->
+<script src="js/hashkat.js"></script>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+</html>

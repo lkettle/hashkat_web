@@ -1,0 +1,171 @@
+<!DOCTYPE html 
+	PUBLIC "-//W#W//DTD XHTML 1.0 Transitional//EN
+
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+
+<head>
+	<link rel="icon" type="image/png" href="images/hkat_3.png" alt="icon" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Hashkat Pref Class</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/hashkat.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<header>
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index_linda.html">Hashkat</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index_linda.html">Hashkat</a></li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/about/">About</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/">Documentation</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/feedback/">Contact</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="agents.html">Previous</a></li>
+					<li><a href="/regions.html">Next</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+</header>
+
+<body class="prefclass">
+
+	<fieldset>
+		<legend id="pref_class">Preference Classes</legend>
+		<p>Preference classes define which signals are likely to be re-transmitted based on both agent_type and tweet_type. For example, if an agent with StandardPref receives a humorous tweet from a Celebrity, they have a 2% chance of retweeting it.</p>
+		<p>There are two default preference classes in Hashkat, which are listed below. The names and add_weights may be modified by the user. To create more preference classes, go to <a href="/build.html">build</a>.</p>
+
+		<p>^^else and all options</p>
+		<table align="center">
+			<tr>
+				<td>Preference Class 0</td>
+				<td>
+					<input type="text" name="regions" value="StandardPref" /> info
+				</td>
+			</tr>
+			<tr>
+				<td>Preference Class 1</td>
+				<td>
+					<input type="text" name="regions" value="NoRetweetPref" /> info
+				</td>
+			</tr>
+		</table>
+		<table align="center">
+			<caption id="pref_0">Preference Class 0:
+				<div id="pref1name"></div>
+			</caption>
+			<tr>
+				<td>Tweet Type</td>
+				<td>plain or musical</td>
+				<td>different_ideology</td>
+				<td>same_ideology</td>
+				<td>humorous</td>
+			</tr>
+			<tr>
+				<td>Standard</td>
+				<td>0.01</td>
+				<td>0.00</td>
+				<td>0.01</td>
+				<td>0.02</td>
+			</tr>
+			<tr>
+				<td>Celebrity</td>
+				<td>0.01</td>
+				<td>0.00</td>
+				<td>0.01</td>
+				<td>0.02</td>
+			</tr>
+			<tr>
+				<td>Else</td>
+				<td>0.01</td>
+				<td>0.00</td>
+				<td>0.01</td>
+				<td>0.02</td>
+			</tr>
+		</table>
+
+		<table align="center">
+			<caption id="pref_0">Preference Class 1:
+				<div id="pref1name"></div>
+			</caption>
+			<tr>
+				<td>Tweet Type</td>
+				<td>plain or musical</td>
+				<td>different_ideology</td>
+				<td>same_ideology</td>
+				<td>humorous</td>
+			</tr>
+			<tr>
+				<td>Standard</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>Celebrity</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>Else</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+		</table>
+
+		<button onclick="add_pref_class()" type="submit" class="btn btn-black btn-lg">Add Preference Class</button>
+
+		<div id="display_pref_classes"></div>
+	</fieldset>
+	</form>
+	<div class="container">
+
+	</div>
+	<!-- custom scripts -->
+	<script src="js/hashkat.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+
+</html>

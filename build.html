@@ -1,0 +1,139 @@
+<!DOCTYPE html 
+	PUBLIC "-//W#W//DTD XHTML 1.0 Transitional//EN
+
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+
+<head>
+	<link rel="icon" type="image/png" href="images/hkat_3.png" alt="icon" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Hashkat Home</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/hashkat.css" rel="stylesheet">
+
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<header>
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index_linda.html">Hashkat</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Hashkat</a></li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/about/">About</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/">Documentation</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/feedback/">Contact</a>
+					</li>
+				</ul>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/index_linda.html">Previous</a></li>
+					<li><a href="/settings.html">Next</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<body class="build">
+	<form action="config_static_h.php" method="POST" target="-blank" accept-charset="UTF-8" autocomplete="off">
+		<!--this will go to config_static.h-->
+		<fieldset>
+			<legend>Build</legend>
+			<p>Settings are automatically saved when you leave the page.</p>
+			<p>Default maximum numbers of each parameter are shown. Hashkat requires at least one Language, Region, Ideology, Agent Type and Preference Class have a non-zero add_weight. If you accept the default build, you may still assign an add_weight of zero to the parameter in your particular configuration. That is, you may have 0% speakers of a language. </p>
+			<p>*At present the number of languages and tweet types cannot modified in Hashkat. </p>
+
+			<table align="center">
+				<tr>
+					<td>Number of Languages*</td>
+					<td>
+						<input type="number" name="language_bin_number" min="3" max="3" value="3" />
+					</td>
+					<td>Add_weight may be set to 0 for all but one language.</td>
+				</tr>
+				<tr>
+					<td>Number of Tweet Types*</td>
+					<td>
+						<input type="number" name="language_bin_number" min="4" max="4" value="4" />
+					</td>
+					<td>Add_weight may be set to 0 for all but one tweet type.</td>
+				</tr>
+				<tr>
+					<td>Number of Ideologies</td>
+					<td>
+						<input type="number" name="ideology_bin_number" min="1" max="9" value="4" />
+					</td>
+					<td>Add_weight may be set to 0 for all but one ideology.</td>
+				</tr>
+				<tr>
+					<td>Number of Agent Types</td>
+					<td>
+						<input type="number" name="language_bin_number" min="1" max="200" value="200" />
+					</td>
+					<td>Add_weight may be set to 0 for all but one agent type.</td>
+				</tr>
+				<tr>
+					<td>Number of Preference Classes</td>
+					<td>
+						<input type="number" name="language_bin_number" min="1" max="9" value="2" />
+					</td>
+					<td>Add_weight may be set to 0 for all but one preference class.</td>
+				</tr>
+				<tr>
+					<td>Number of Regions</td>
+					<td>
+						<input type="number" name="region_bin_number" min="1" max="9" value="3" />
+					</td>
+					<td>Add_weight may be set to 0 for all but one region.</td>
+				</tr>
+			</table>
+			<br />
+			<p>^^ want to create a file we can work from</p>
+		</fieldset>
+
+		</div>
+		<div>
+			<input id="save_file_here" type="text" value="where to save file" />
+		</div>
+		<button class="browse" onclick="bbb" type="submit" class="btn btn-black btn-lg">Browse</button>
+
+
+		<!-- custom scripts -->
+		<script src="js/hashkat.js"></script>
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+
+</html>

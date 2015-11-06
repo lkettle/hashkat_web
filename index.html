@@ -1,0 +1,430 @@
+<!DOCTYPE html 
+	PUBLIC "-//W#W//DTD XHTML 1.0 Transitional//EN
+
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+
+<head>
+	<link rel="icon" type="image/png" href="images/hkat_3.png" alt="icon" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<<<<<<< HEAD <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>HashKat - Social Media Simulator</title>
+		=======
+		<title>Hashkat Home</title>
+		>>>>>>> 5a897fab325e6d73b87285d26dd5036ec1364764
+
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom CSS -->
+		<link href="css/hashkat.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<header>
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">Hashkat</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Hashkat</a></li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/about/">About</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/">Documentation</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/feedback/">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+</header>
+
+<body class="homeJ">
+	<<<<<<< HEAD <!-- Navigation -->
+		<!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Project HashK@</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="http://docs.hashkat.org/en/latest/">Documentation</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
+						</li>
+						<li>
+							<a href="http://github.com/hashkat/hashkat/">GitHub</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
+
+		<!-- Put your page content here! -->
+		<div class="container">
+
+			<div class="row buttonContainer">
+				<div class="col-xs-4">
+					<button type="button" class="btn btn-black btn-lg btn-block" data-toggle="modal" data-target="#myModal">Build</button>
+				</div>
+				<div class="col-xs-4">
+					<button type="button" class="btn btn-black btn-lg btn-block" data-toggle="collapse" data-target="#toggleForm">Configure</button>
+				</div>
+				<div class="col-xs-4">
+					<button type="button" class="btn btn-black btn-lg btn-block">Run</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Collapsible Element HTML -->
+		<form>
+			<div id="toggleForm" class="container-fluid collapse fade formRow">
+				<ul id="myTabs" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#networkTab" aria-controls="networkTab" role="tab" data-toggle="tab">Network</a></li>
+					<li role="presentation"><a href="#interactiveTab" aria-controls="interactiveTab" role="tab" data-toggle="tab">Interactive</a></li>
+					<li role="presentation"><a href="#barabasiTab" aria-controls="barabasiTab" role="tab" data-toggle="tab">Barabasi</a></li>
+					<li role="presentation"><a href="#addrateTab" aria-controls="addrateTab" role="tab" data-toggle="tab">Agent Add Rate</a></li>
+					<li role="presentation"><a href="#followmodelTab" aria-controls="followmodelTab" role="tab" data-toggle="tab">Follow Model</a></li>
+					<li role="presentation"><a href="#outputTab" aria-controls="outputTab" role="tab" data-toggle="tab">Output Files</a></li>
+					<li role="presentation"><a href="#observationTab" aria-controls="observationTab" role="tab" data-toggle="tab">Tweet Observation</a></li>
+					<li role="presentation"><a href="#ranksTab" aria-controls="ranksTab" role="tab" data-toggle="tab">Ranks</a></li>
+				</ul>
+				<div class="container tab-content">
+					<div id="networkTab" role="tabpanel" class="tab-pane fade in active row">
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label for="initialAgents">Initial Agents</label>
+								<input type="number" class="form-control" id="initialAgents" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="maximumAgents">Maximum Agents</label>
+								<input type="number" class="form-control" id="maximumAgents" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="maxSimTime">Maximum Simulated Time</label>
+								<input type="text" class="form-control" id="maxSimTime" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="maxRealTime">Maximum Real Time</label>
+								<input type="text" class="form-control" id="maxRealTime" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="unfollowRate">Unfollow Tweet Rate</label>
+								<input type="number" class="form-control" id="unfollowRate" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="maxAnalysisSteps">Maximum Analysis Steps</label>
+								<input type="checkbox" class="form-control" id="maxAnalysisSteps" placeholder="">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label for="randTimeInc">Use Random Time Increment</label>
+								<input type="checkbox" checked class="form-control" id="randTimeInc" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="useFollowBack">Use Follow-Back</label>
+								<input type="checkbox" checked class="form-control" id="useFollowBack" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="useFollowRetweet">Use Follow Via Retweets</label>
+								<input type="checkbox" checked class="form-control" id="useFollowRetweet" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="useHashtagProb">Use Hashtag Probability</label>
+								<input type="checkbox" checked class="form-control" id="useHashtagProb" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="stage1Unfollow">Stage 01 Unfollow</label>
+								<input type="checkbox" checked class="form-control" id="stage1Unfollow" placeholder="">
+							</div>
+						</div>
+					</div>
+
+					<div id="interactiveTab" class="tab-pane fade row" role="tabpanel">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<label>Enable Interactive Mode</label>
+								<label>TRUE
+									<input type="radio" name="interactiveMode" class="form-control" id="enInteractiveMode1" placeholder="">
+								</label>
+								<label>FALSE
+									<input type="radio" name="interactiveMode" class="form-control" id="enInteractiveMode2" placeholder="">
+								</label>
+							</div>
+							<div class="form-group">
+								<label for="enLuaHooks">Enable Lua Hooks</label>
+								<input type="checkbox" checked class="form-control" id="enLuaHooks" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="luaScript">Lua Script</label>
+								<input type="checkbox" checked class="form-control" id="luaScript" placeholder="">
+							</div>
+						</div>
+					</div>
+
+					<div id="barabasiTab" class="tab-pane fade row" role="tabpanel">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<label for="enInteractiveMode">Enable Interactive Mode</label>
+								<input type="radio" checked class="form-control" id="enInteractiveMode" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="enLuaHooks">Enable Lua Hooks</label>
+								<input type="checkbox" checked class="form-control" id="enLuaHooks" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="luaScript">Lua Script</label>
+								<input type="checkbox" checked class="form-control" id="luaScript" placeholder="">
+							</div>
+						</div>
+					</div>
+
+					<div id="addrateTab" class="tab-pane fade row" role="tabpanel">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<label for="addRate">Add Rate</label>
+								<input type="number" class="form-control" id="addRate" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="rateFunction">Function</label>
+								<input type="radio" name="functionRadio" class="form-control" id="rateFunction" placeholder="">
+								<input type="radio" name="functionRadio" class="form-control" id="rateFunction" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="constantValue">Constant Value</label>
+								<input type="number" class="form-control" id="constantValue" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="slope">Slope</label>
+								<input type="number" class="form-control" id="slope" placeholder="">
+							</div>
+						</div>
+					</div>
+
+					<div id="followmodelTab" class="tab-pane fade row" role="tabpanel">
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label for="followModel">Follow Model</label>
+								<select class="form-control" id="followModel">
+									<option>Random</option>
+									<option>Preferential Global</option>
+									<option>Agent</option>
+									<option>Preferential Agent</option>
+									<option>Combination</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="rateFunction">Function</label>
+								<input type="radio" class="form-control" id="rateFunction" placeholder="">Constant
+								<input type="radio" class="form-control" id="rateFunction" placeholder="">Linear
+							</div>
+							<div class="form-group">
+								<label for="constantValue">Constant Value</label>
+								<input type="number" class="form-control" id="constantValue" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="slope">Slope</label>
+								<input type="number" class="form-control" id="slope" placeholder="">
+							</div>
+						</div>
+					</div>
+
+					<div id="outputTab" class="tab-pane fade row" role="tabpanel">
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label for="followModel">Follow Model</label>
+								<select class="form-control" id="followModel">
+									<option>Random</option>
+									<option>Preferential Global</option>
+									<option>Agent</option>
+									<option>Preferential Agent</option>
+									<option>Combination</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="rateFunction">Function</label>
+								<input type="radio" class="form-control" id="rateFunction" placeholder="">Constant
+								<input type="radio" class="form-control" id="rateFunction" placeholder="">Linear
+							</div>
+							<div class="form-group">
+								<label for="constantValue">Constant Value</label>
+								<input type="number" class="form-control" id="constantValue" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="slope">Slope</label>
+								<input type="number" class="form-control" id="slope" placeholder="">
+							</div>
+						</div>
+					</div>
+
+					<div id="observationTab" class="tab-pane fade row" role="tabpanel">
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label for="followModel">Follow Model</label>
+								<select class="form-control" id="followModel">
+									<option>Random</option>
+									<option>Preferential Global</option>
+									<option>Agent</option>
+									<option>Preferential Agent</option>
+									<option>Combination</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="rateFunction">Function</label>
+								<input type="radio" class="form-control" id="rateFunction" placeholder="">Constant
+								<input type="radio" class="form-control" id="rateFunction" placeholder="">Linear
+							</div>
+							<div class="form-group">
+								<label for="constantValue">Constant Value</label>
+								<input type="number" class="form-control" id="constantValue" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="slope">Slope</label>
+								<input type="number" class="form-control" id="slope" placeholder="">
+							</div>
+						</div>
+					</div>
+
+					<div id="ranksTab" class="tab-pane fade row" role="tabpanel">
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label for="followModel">Follow Model</label>
+								<select class="form-control" id="followModel">
+									<option>Random</option>
+									<option>Preferential Global</option>
+									<option>Agent</option>
+									<option>Preferential Agent</option>
+									<option>Combination</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="rateFunction">Function</label>
+								<input type="radio" class="form-control" id="rateFunction" placeholder="">Constant
+								<input type="radio" class="form-control" id="rateFunction" placeholder="">Linear
+							</div>
+							<div class="form-group">
+								<label for="constantValue">Constant Value</label>
+								<input type="number" class="form-control" id="constantValue" placeholder="">
+							</div>
+							<div class="form-group">
+								<label for="slope">Slope</label>
+								<input type="number" class="form-control" id="slope" placeholder="">
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</form>
+		<script>
+			$('#myTabs a').click(function(e) {
+				e.preventDefault()
+				$(this).tab('show')
+			})
+
+		</script>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						<p>blablabla</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		=======
+		<div class="container">
+			<div class="row emptyRow"></div>
+			<div class="row buttonContainer">
+				<div class="col-xs-2">
+					<a href="/build.html" role="button" class="btn btn-black btn-lg btn-block">Build</a>
+				</div>
+				<div class="col-xs-2">
+					<a href="/advanced.html" role="button" class="btn btn-black btn-lg btn-block">Advanced</a>
+				</div>
+				<div class="col-xs-2">
+					<a href="/world.html" role="button" class="btn btn-black btn-lg btn-block">World</a>
+				</div>
+				<div class="col-xs-2">
+					<a href="/simulation.html" role="button" class="btn btn-black btn-lg btn-block">Simulation</a>
+				</div>
+				<div class="col-xs-2">
+					<a href="/run.html" role="button" class="btn btn-black btn-lg btn-block">Run</a>
+				</div>
+				<div class="col-xs-2">
+					<a href="/output.html" role="button" class="btn btn-black btn-lg btn-block">Output</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- custom scripts -->
+		<script src="js/hashkat.js"></script>
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		>>>>>>> 5a897fab325e6d73b87285d26dd5036ec1364764
+
+</body>
+
+</html>

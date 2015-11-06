@@ -1,0 +1,176 @@
+<!-- BUILD Part to config_static_h.php-->
+<!-- CONFIGURE Part to INFILE_yaml.php-->
+
+<!DOCTYPE html 
+	PUBLIC "-//W#W//DTD XHTML 1.0 Transitional//EN
+
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+
+<head>
+	<link rel="icon" type="image/png" href="images/hkat_3.png" alt="icon" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Hashkat World</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/hashkat.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<header>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index_linda.html">Hashkat</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Hashkat</a></li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/">Documentation</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/about/">About</a>
+					</li>
+					<li>
+						<a href="http://docs.hashkat.org/en/latest/feedback/">Contact</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/settings.html">Previous</a></li>
+					<li><a href="/agents.html">Next</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<body class="world">
+
+	<fieldset>
+		<legend>World</legend>
+		<p>The default build of Hashkat permits 3 languages, 4 ideologies, 3 regions, 2 preference classes and 200 agent_types, although the default build configures only 2 agent types. To change the maximum number of elements, go to <a href="build.html">build</a>.</p>
+		<p>In Hashkat the output values may be reported by number not name. </p>
+
+		<fieldset>
+			<legend id="lang">Languages</legend>
+			<p>At present the name and number of languages cannot modified in Hashkat, however the add_weight may be. That is, you may have 0% speakers of a language. However, agents must speak at least one language, so one language must have a non-zero add_weight. </p>
+			<p>^^discuss with Isaac re - ideology - programming effect</p>
+
+			<table align="center">
+				<tr>
+					<td>Language 0</td>
+					<td>English</td>
+				</tr>
+				<tr>
+					<td>Language 1</td>
+					<td>French and English</td>
+				</tr>
+				<tr>
+					<td>Language 2</td>
+					<td>French</td>
+				</tr>
+				<tr>
+					<td>Language 3</td>
+					<td>Spanish</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend id="tweet_type">Tweet Types</legend>
+			<p>Tweet type affects the scope of the signal's re-transmission, and may be a factor in another agent's decision to follow or retweet. At present tweet types may not be modified, although an agent may transmit 0% of a certain tweet_type (ie 0% musical tweets). At least one tweet_type must have a non zero add_weight. </p>
+			<table align="center">
+				<tr>
+					<td></td>
+					<td>name</td>
+					<td>scope of retransmission</td>
+				</tr>
+				<tr>
+					<td>Tweet Type 0</td>
+					<td>plain</td>
+					<td>within language</td>
+				</tr>
+				<tr>
+					<td>Tweet Type 1</td>
+					<td>humorous</td>
+					<td>within language</td>
+				</tr>
+				<tr>
+					<td>Tweet Type 2</td>
+					<td>ideological</td>
+					<td>within language and region</td>
+				</tr>
+				<tr>
+					<td>Tweet Type 3</td>
+					<td>musical</td>
+					<td>unlimited</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend id="ideology">Ideology</legend>
+			<p>From one to four ideologies may be specified in the default build of Hashkat. Add_weight may be set to 0 for all but one ideology. Names of ideologies may be changed below.</p>
+
+			<table align="center">
+				<tr>
+					<td>Ideology 0</td>
+					<td>
+						<input type="text" name="ideologies" value="Red" />
+					</td>
+				</tr>
+				<tr>
+					<td>Ideology 1</td>
+					<td>
+						<input type="text" name="ideologies" value="Blue" />
+					</td>
+				</tr>
+				<tr>
+					<td>Ideology 2</td>
+					<td>
+						<input type="text" name="ideologies" value="Green" />
+					</td>
+				</tr>
+				<tr>
+					<td>Ideology 3</td>
+					<td>
+						<input type="text" name="ideologies" value="Orange" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		</form>
+		<div class="container">
+
+		</div>
+		<!-- custom scripts -->
+		<script src="js/hashkat.js"></script>
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+
+</html>
